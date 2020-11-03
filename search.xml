@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>RasperryPi install hass.io and more</title>
+      <link href="2020/11/03/raspberrypi-1/"/>
+      <url>2020/11/03/raspberrypi-1/</url>
+      
+        <content type="html"><![CDATA[<ol><li>Format tool </li><li>Raspbian Buster with desktop <a href="https://www.raspberrypi.org/downloads/raspbian/">https://www.raspberrypi.org/downloads/raspbian/</a></li><li>download balenaEtcher <a href="https://www.balena.io/etcher/">https://www.balena.io/etcher/</a></li><li>flash system to TF card then will show two disks in your file-explorer</li><li>open the disk named boot , establish on empty SSH file</li><li>把TF卡插入树莓派4，然后启动。查看路由器中新增的设备，通过SSH软件进行访问，默认用户名密码为：pi/raspberry,进入系统。 用PUTTY</li><li>输入sudo raspi-config,进入如下界面。 选择4 Localisation Options</li><li>选择I2 Change Timezone-&gt;Asia-&gt;Shanghai，</li><li>Resolution 改成第三个 为了VNC能显示</li><li>VNC功能打开</li><li>退出（自动重启）</li><li>安装docker-ce<br>输入命令：sudo -i<br>              apt-get install software-properties-common<br>              apt-get update<br>              apt-get install -y apparmor-utils apt-transport-https avahi-daemon ca-certificates curl dbus jq network-manager socat<br>curl -fsSL get.docker.com | sh<br>其中，最后一步安装时间挺长的，请耐心等待 （亲测一个小时左右）（指令一条一条来，可以重复几遍，看成功没有）</li><li>12、安装hassio<br>curl -sL “<a href="https://raw.githubusercontent.com/home-assistant/hassio-installer/master/hassio_install.sh&quot;">https://raw.githubusercontent.com/home-assistant/hassio-installer/master/hassio_install.sh&quot;</a> | bash -s – -m raspberrypi4<br>（时间比较长，一直等到出现 [info]RUN HASS.IO 为止</li><li>安装完成</li><li>打开raspberry ip:8123 例如 192.168.1.13:8123 可能当时无法立即打开，等一会，估计十几分钟。</li><li>一直到能打开8123且看到蓝色房子，第一次需要十几二十分钟来初始化。</li><li>开启samba 电脑局域网访问树莓派文件。</li><li>sudo apt-get install samba<br>编辑samba的配置文件，把只读改改成可读写等，命令：sudo nano /etc/samba/smb.conf<br>将配置文件中的 read only =no<br>增加用户pi并设置密码：sudo smbpasswd -a pi<br>重启samba服务：sudo systemctl restart smbd</li><li>电脑CMD输入，映射到电脑Y盘  net use y:  \树莓派IP地址\pi 登录密码  /user:pi<br><a href="https://bbs.hassbian.com/thread-8044-1-1.html">https://bbs.hassbian.com/thread-8044-1-1.html</a> 添加configuration tool 可以直接在界面改configuration.Yaml</li><li>树莓派连接蓝牙设备 手机下载 蓝牙调试器 查看家里蓝牙设备MAC地址</li><li>For Example : connect 88:2D:53:11:C3:D0 trust 88:2D:53:11:C3:D0 </li><li>设置 自启动   sudo crontab -e       @reboot sleep 15 &amp;&amp; echo “connect 88:2D:53:11:C3:D0” | bluetoothctl</li></ol><p>以上是纯净系统安装hass.io的老方法，比较容易出问题且网速无法保证。<br>目前采用最简易的办法，就是下载hachina上装有hass.io的镜像就可以了，省去了很多的麻烦。<br><a href="https://www.hachina.io/docs/23131.html">https://www.hachina.io/docs/23131.html</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Raspberry Pi </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Android Webview 添加下拉刷新和删除缓存功能</title>
+      <link href="2020/11/03/java-1/"/>
+      <url>2020/11/03/java-1/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;XML 文件写法</span><br><span class="line"></span><br><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;match_parent&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;android.support.v4.widget.SwipeRefreshLayout</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;swipe_container&quot;</span><br><span class="line">        android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;match_parent&quot; &gt;</span><br><span class="line"></span><br><span class="line">        &lt;WebView</span><br><span class="line">            android:id&#x3D;&quot;@+id&#x2F;wv&quot;</span><br><span class="line">            android:layout_width&#x3D;&quot;wrap_content&quot;</span><br><span class="line">            android:layout_height&#x3D;&quot;wrap_content&quot;&gt;</span><br><span class="line">        &lt;&#x2F;WebView&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;android.support.v4.widget.SwipeRefreshLayout&gt;</span><br><span class="line">&lt;&#x2F;LinearLayout&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;JAVA写法</span><br><span class="line">public class WebViewActivity extends AppCompatActivity</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    private WebView mBtnWv;</span><br><span class="line">    private SwipeRefreshLayout swipeRefreshLayout; &#x2F;&#x2F;下拉刷新</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState)</span><br><span class="line">    &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_web_view);</span><br><span class="line">        mBtnWv &#x3D; findViewById(R.id.wv);</span><br><span class="line">        getSupportActionBar().hide();&#x2F;&#x2F;隐藏标题栏</span><br><span class="line">        &#x2F;&#x2F; 加载本地html</span><br><span class="line">&#x2F;&#x2F;        mBtnWv.loadUrl(&quot;file:&#x2F;&#x2F;&#x2F;android_asset&#x2F;404.html&quot;);</span><br><span class="line">        &#x2F;&#x2F; 加载网络url</span><br><span class="line">        mBtnWv.getSettings().setJavaScriptEnabled(true);</span><br><span class="line">        mBtnWv.setWebViewClient(new MyWebViewClient());</span><br><span class="line">        mBtnWv.setWebChromeClient(new MyWebChromeClient());</span><br><span class="line">        mBtnWv.clearCache(true); &#x2F;&#x2F;清除缓存</span><br><span class="line">        mBtnWv.loadUrl(&quot;https:&#x2F;&#x2F;ooowuyaooo.gitee.io&#x2F;&quot;);</span><br><span class="line"></span><br><span class="line">        SwipeRefreshLayout swip_refresh_layout&#x3D;findViewById(R.id.swipe_container); &#x2F;&#x2F;下拉刷新</span><br><span class="line"></span><br><span class="line">        swip_refresh_layout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() &#123; &#x2F;&#x2F;下拉刷新</span><br><span class="line">            @Override</span><br><span class="line">            public void onRefresh() &#123;</span><br><span class="line">                new Handler().postDelayed(new Runnable() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public void run() &#123;</span><br><span class="line"></span><br><span class="line">                        mBtnWv.clearCache(true); &#x2F;&#x2F;清除缓存</span><br><span class="line">                        mBtnWv.loadUrl(&quot;https:&#x2F;&#x2F;ooowuyaooo.gitee.io&#x2F;&quot;);</span><br><span class="line">                        swip_refresh_layout.setRefreshing(false);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,2000);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;省略别的.....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Above codes can realize the refresh function and clear the cache everytime when back-and-in and refresh to keep the datas updated. </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo 插入图片 失败的解决方案</title>
+      <link href="2020/11/01/tips1/"/>
+      <url>2020/11/01/tips1/</url>
+      
+        <content type="html"><![CDATA[<p>使用hexo 插入图片，图片的标签会变为 设置的 url后缀+文件名，如/.com/xxx.jpg 等<br>原因是因为 hexo 升级后，对应的插件hexo-asset-image 并未升级，且留下bug，这里全部修改为绝对路径 即 全域名</p><p>修改 node_module/hexo-asset-image/index.js 中的大概60行附近的</p><p>//这个是源码<br>$(this).attr(‘src’, config.root + link + src);<br>//修改为如下，data.permalink 是全路径 如我的<br>$(this).attr(‘src’, data.permalink +src);</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hexo Tips </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Siemns Tsend/rcv connection</title>
+      <link href="2020/10/30/article-name/"/>
+      <url>2020/10/30/article-name/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/.io//1.png"><br><img src="/.io//2.png"></p><p>REQ / EN_R should be rise edge activated , both conf be true.<br>Len is the length of communication data 3 means 3 bytes =24 bits. </p><p>7004<br>通信连接已建立并且正在受到监视。未激活任何接收作业处理。</p><p>7006<br>当前正接收数据。</p><p>check if the status of Tsend is 7004 and Trcv is 7006.</p><p>#CONNECT not input the parameters open Properties  configure the Connection Data  ,  Connection ID (should be different from the remote station) , the ip address ,  port </p><p>local select initiative establish the connections . remote select opposite thing . </p><p>Tsend_properties<br><img src="/.io//3.png"><br><img src="/.io//4.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Connection</title>
+      <link href="2020/10/30/Connection/"/>
+      <url>2020/10/30/Connection/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
