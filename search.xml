@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Ubuntu 环境</title>
+      <link href="2020/11/04/ubuntu-1/"/>
+      <url>2020/11/04/ubuntu-1/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>install Node-red<br>sudo apt-get install nodejs<br>sudo apt-get install npm<br>sudo npm install -g node-red<br>node-red<br>在输入命令期间可能会出现如下这个问题<br>alexander@alexander-virtual-machine:~$ sudo apt-get install -y httpd<br>E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)<br>E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?<br>主要是后台还有apt进程<br>sudo rm /var/cache/apt/archives/lock<br>sudo rm /var/lib/dpkg/lock<br>sudo dpkg –configure -a<br>sudo apt-get update<br>然后重新输入上面的命令<br>127.0.0.1:1880登录。 </p></li><li><p>安装influxdb wget. deb64 </p></li><li><p>安装homeassistant frontend<br>pip3 install –upgrade home-assistant-frontend -i<br><a href="https://pypi.python.org/simple/">https://pypi.python.org/simple/</a> –trusted-host pypi.python.org</p></li><li><p>noderd 自启动 <a href="https://blog.csdn.net/Argon_Ghost/article/details/104481455">https://blog.csdn.net/Argon_Ghost/article/details/104481455</a><br>解决方法：<br>安装pm2：<br>npm install pm2 -gd<br>使用PM2启动Node-red：<br>pm2 start node-red<br>查看下启动项列表：<br>pm2 ls<br>如果加载成功会显示类似下面的内容：</p><p>root@:~# pm2 ls<br>┌─────┬─────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐<br>│ id  │ name        │ namespace   │ version │ mode    │ pid      │ uptime │ ?    │ status    │ cpu      │ mem      │ user     │ watching │<br>├─────┼─────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤<br>│ 0   │ node-red    │ default     │ N/A     │ fork    │ 3772     │ 22h    │ 1    │ online    │ 0.2%     │ 123.3mb  │ root     │ disabled │<br>└─────┴─────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘<br>设置pm2为自启进程：<br>sudo pm2 startup<br>注：这个命令执行后，系统会创建启动脚本，在Ubuntu18.04上是会自动添加软链接的，如果是别的版本，可能就需要你按照提示输出的命令去执行。 其它的版本可能会输出一些命令，按照提示复制到bash输入并回车就可以了，这一步其实就是添加一个系统自启服务。<br>保存pm2修改内容：<br>sudo pm2 save</p></li><li><p>Prometheus<br>sudo nano /etc/prometheus/prometheus.yml<br><a href="http://localhost/zabbix/api_jsonrpc.php">http://localhost/zabbix/api_jsonrpc.php</a></p></li><li><p>Grafana 邮件 sudo nano /etc/grafana/grafana.ini</p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>RasperryPi install hass.io and more</title>
       <link href="2020/11/03/raspberrypi-1/"/>
       <url>2020/11/03/raspberrypi-1/</url>
