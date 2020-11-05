@@ -8,7 +8,7 @@
       <link href="2020/11/05/self/"/>
       <url>2020/11/05/self/</url>
       
-        <content type="html"><![CDATA[<div class="mermaid">pie    My Ability    &quot;Siemens software&quot; : 30    &quot;Java&quot; : 25    &quot;C#&quot; : 25    &quot;python&quot; :  5&quot;Pascal&quot; :  10&quot;Javascript&quot; :  5</div>]]></content>
+        <content type="html"><![CDATA[<div class="mermaid">pie    title My Skills    &quot;Siemens software&quot; : 30    &quot;Java&quot; : 25    &quot;C#&quot; : 25    &quot;Python&quot; :  5&quot;Pascal&quot; :  10&quot;Javascript&quot; :  3&quot;Database&quot; :  2</div><p>Lots of years immersed in industrial field for the OEM machine control.<br>World is changing, Industry 4.0 is coming….everything connected to the internet.</p><p>Siemens software include Step7/Microwin/Tia Portal/Scout/SIMOTION/Wincc/Wincc flexible/Hmi pro/Hmi lite …<br>Java in JavaFx/Swing focus on Windows Application .<br>C# in Winform / Asp.net core / Unity .<br>Pascal in Simotion for motion control logic .<br>Python for web spider .<br>Database only Mysql and SqlServer .</p><p>In lesure time play the RaspberryPi for the new things now is learning the Openrcv </p><p>Wanna to learn the Tensorflow/caffe frame for the artificial intellifence and machine learning but still out of the door…anyway can someone help me?</p>]]></content>
       
       
       
