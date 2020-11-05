@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Readme.txt</title>
+      <link href="2020/11/05/self/"/>
+      <url>2020/11/05/self/</url>
+      
+        <content type="html"><![CDATA[<div class="mermaid">pie    My Ability    &quot;Siemens software&quot; : 30    &quot;Java&quot; : 25    &quot;C#&quot; : 25    &quot;python&quot; :  5&quot;Pascal&quot; :  10&quot;Javascript&quot; :  5</div>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Readme.txt </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Android Webview 增加加载progressbar</title>
       <link href="2020/11/04/java-2/"/>
       <url>2020/11/04/java-2/</url>
