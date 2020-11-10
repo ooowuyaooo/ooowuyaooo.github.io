@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Windows下安装MySQL详细教程</title>
+      <link href="2020/11/10/mysql-1/"/>
+      <url>2020/11/10/mysql-1/</url>
+      
+        <content type="html"><![CDATA[<p>Using windows docker version&lt;2.5.0.0 installed mysql/sqlserver/influxdb/nodered.etc… everything running well but after one time updated to 2.5.0.0 alles kaputt.<br>Big error during starting dockers .. time out and lots of unrecognized faults. </p><p>then search the mothod about directly install the mysql on the windows </p><p>Windows下安装MySQL详细教程<br>下载地址：<a href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a><br><img src="/2020/11/10/mysql-1/mysql_1">.png)<br>点击下载之后，可以选择注册Oracle账号，也可以跳过直接下载。<br><img src="/2020/11/10/mysql-1/mysql_2">.png)</p><p>配置环境变量<br>变量名：MYSQL_HOME<br>变量值：C:\software<br>(extract your download files to C:\software)<br><img src="/2020/11/10/mysql-1/mysql_3">.png)</p><p>administrator ways to run CMD<br>进入C:\software\mysql-8.0.19-winx64.zip\mysql-8.0.19-winx64\bin下<br><img src="/2020/11/10/mysql-1/mysql_4">.png)</p><p>执行命令：mysqld –initialize-insecure –user=mysql  在C:\software\mysql-8.0.19-winx64.zip\mysql-8.0.19-winx64下和bin同级目录生成data目录<br><img src="/2020/11/10/mysql-1/mysql_5">.png)</p><p>mysqld -install<br><img src="/2020/11/10/mysql-1/mysql_6">.png)</p><p>net start MySQL<br><img src="/2020/11/10/mysql-1/mysql_7">.png)</p><p>登录mysql:(因为之前没设置密码，所以密码为空，不用输入密码，直接回车即可）<br>mysql -u root -p<br><img src="/2020/11/10/mysql-1/mysql_8">.png)</p><p>查询用户密码命令：mysql&gt; select host,user,authentication_string from mysql.user;<br><img src="/2020/11/10/mysql-1/mysql_9">.png)</p><p>设置（或修改）root用户密码mysql&gt; use mysql<br><img src="/2020/11/10/mysql-1/mysql_10">.png)</p><p>修改密码 mysql&gt; ALTER USER ‘root’@’localhost’ IDENTIFIED WITH mysql_native_password BY ‘123456’;<br><img src="/2020/11/10/mysql-1/mysql_11">.png)</p><p>保存设置 mysql&gt; flush privileges;<br><img src="/2020/11/10/mysql-1/mysql_12">.png)</p><p>After restart the whole machine find out that the mysql server will start automatically when system booted. </p><p>Method from internet BruceLong</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Readme.txt</title>
       <link href="2020/11/05/self/"/>
       <url>2020/11/05/self/</url>
