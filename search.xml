@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Italian cutting machine domestic commissioning experience</title>
+      <link href="2020/11/10/siemens-1/"/>
+      <url>2020/11/10/siemens-1/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>Festo Cpx module<br>In Tia portal software assign the Ip address for Festo CPX module and then open browser the Ip address<br>you will see the pics below<br><img src="/2020/11/10/siemens-1/siemens_1_1.jpg"><br>it will be some alarms on that<br>Everytime change the configuration remember press the button which on the CPI module top left 3~5 seconds and then unplug the power and plug on .</p></li><li><p>the wire connection inside cabinet<br><img src="/2020/11/10/siemens-1/siemens_1_2.jpg"><br>9200 DI4<br>9201 DI5</p></li><li><p>The Power connector on the Simotion modules<br><img src="/2020/11/10/siemens-1/siemens_1_3.jpg"><br>or the LEDS on the modules OFF</p></li><li><p>Hardware configuration below<br><img src="/2020/11/10/siemens-1/siemens_1_4.jpg"><br><img src="/2020/11/10/siemens-1/siemens_1_5.jpg"></p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Windows下安装MySQL详细教程</title>
       <link href="2020/11/10/mysql-1/"/>
       <url>2020/11/10/mysql-1/</url>
