@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Visual Stuidio 2019 C++ Environment issue</title>
+      <link href="2020/11/18/cplus-1/"/>
+      <url>2020/11/18/cplus-1/</url>
+      
+        <content type="html"><![CDATA[<p>While using Visual Studio 2019 establish C++ projects compiling the projects found out issues that “No such files XXXX.h”<br>After checking solution on the internet that<br><img src="/2020/11/18/cplus-1/a.png"><br>checking your windows version that<br><img src="/2020/11/18/cplus-1/b.png"><br>so you have to install the windows SDK software which match your windows version<br>previously i installed the windows 10SDK(10.0.18362.0) it caused lots of issues then removed and use Windows SDK(10.0.19041.0)instead .<br>Then everything goes well </p><p>no more fault while compiling the projects.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Italian cutting machine domestic commissioning experience</title>
       <link href="2020/11/10/siemens-1/"/>
       <url>2020/11/10/siemens-1/</url>
