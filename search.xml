@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Modify device network parameter while doing the configuration on TiaPortal software</title>
+      <link href="2020/12/04/siemens-2/"/>
+      <url>2020/12/04/siemens-2/</url>
+      
+        <content type="html"><![CDATA[<p>Software needed: </p><ol><li>TiaPortal </li><li>Proneta </li></ol><p>If sometimes wanna to modify one device network parameter if just use the proneta to reset, it will be a alarm that “reset failed” and you can see the Ip address and Mac address turn to Null but after a while maybe 30 seconds it turns back<br>how to solve this issues ? it because of the PLC write it back </p><p>so the first thing is unplug the PLC<br><img src="/2020/12/04/siemens-2/S2.jpg"><br>then use proneta to reset the network parameter<br><img src="/2020/12/04/siemens-2/S1.jpg"></p><p>after that you can configure the right things in the TiaPortal software as you usually did.  </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Visual Studio 2019 C++ Environment issue</title>
       <link href="2020/11/18/cplus-1/"/>
       <url>2020/11/18/cplus-1/</url>
