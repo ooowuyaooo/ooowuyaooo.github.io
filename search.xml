@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MultfiFlex/QFM project experience No.1 (G120C speed settings/ safety / putty)</title>
+      <link href="2020/12/09/siemens-3/"/>
+      <url>2020/12/09/siemens-3/</url>
+      
+        <content type="html"><![CDATA[<p>All the conveyor here are using P2000 to control the real speed it can be modified little here<br><img src="/2020/12/09/siemens-3/11.JPG"><br>if modified and seems not worked then check here<br><img src="/2020/12/09/siemens-3/22.JPG"><br>these parameters also be set  during the Commissioning Wizard<br><img src="/2020/12/09/siemens-3/33.JPG"> </p><p>if using the speed control(encoderless) motor with putty insulmeter then one param needed<br><img src="/2020/12/09/siemens-3/44.JPG"><br>double check the wiring </p><p>with the STO key to control the safty function you must set param here<br>Basic Fcuntions<br><img src="/2020/12/09/siemens-3/55.JPG"><br>Control type –&gt;&gt; via terminals   (check wiring)<br><img src="/2020/12/09/siemens-3/66.JPG"><br>Also the Acceptance test needed<br><img src="/2020/12/09/siemens-3/77.JPG"><br>check the safty Input according to the drawing (16/17 are using for safty)<br><img src="/2020/12/09/siemens-3/88.JPG"> </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Modify device network parameter while doing the configuration on TiaPortal software</title>
       <link href="2020/12/04/siemens-2/"/>
       <url>2020/12/04/siemens-2/</url>
