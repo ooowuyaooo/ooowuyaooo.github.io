@@ -4,7 +4,26 @@
   
     
     <entry>
-      <title>MultfiFlex/QFM project experience No.2 (putty / segments / display)</title>
+      <title>MultiFlex/QFM project experience No.3 (festo / pump production&amp;recirculation / motor control wizard)</title>
+      <link href="2020/12/14/siemens-5/"/>
+      <url>2020/12/14/siemens-5/</url>
+      
+        <content type="html"><![CDATA[<p>The method to teach the festo remote module</p><ol><li>download the assigned ip address to the festo module from the hardware configuration Tia</li><li>open the ip address in the browser to check the alarms</li><li>if red light flashing on the module then try to teach </li><li>remove the supply power wire a little then press the button in red square then reconnect the supply wire</li><li>when after 3 seconds then release the button , two buttons one by one</li><li>no red flashing all green , over.<br><img src="/2020/12/14/siemens-5/festo.jpg"> </li></ol><p>if the same parameter but the motor output P not enough better change in the motor commissiong wizard<br>from U/F characteristic control to speed control encoderless<br><img src="/2020/12/14/siemens-5/UFcontrol.JPG"><br><img src="/2020/12/14/siemens-5/speedcontrol.JPG"> </p><p>in the Call pump program block<br>the Production and Recirculation valve can only one be activated at the same time<br>so check here with the switch which on the control panel<br><img src="/2020/12/14/siemens-5/Productionandrecirulation.JPG"> </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MultiFlex/QFM project experience No.2 (putty / segments / display)</title>
       <link href="2020/12/11/siemens-4/"/>
       <url>2020/12/11/siemens-4/</url>
       
@@ -23,7 +42,7 @@
     
     
     <entry>
-      <title>MultfiFlex/QFM project experience No.1 (G120C speed settings/ safety / putty)</title>
+      <title>MultiFlex/QFM project experience No.1 (G120C speed settings/ safety / putty)</title>
       <link href="2020/12/09/siemens-3/"/>
       <url>2020/12/09/siemens-3/</url>
       
