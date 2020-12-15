@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MultiFlex/QFM project experience No.4 (calibrate the pump)</title>
+      <link href="2020/12/15/siemens-6/"/>
+      <url>2020/12/15/siemens-6/</url>
+      
+        <content type="html"><![CDATA[<p>First of all BUTTON”Pump start” cannot be activated if machine has faults.</p><ol><li><p>Go into DB25 to check the Pumpstop signals<br><img src="/2020/12/15/siemens-6/faultlist.JPG"> </p></li><li><p>check PDE Screen Calibration–&gt;Operation–&gt;Pumps</p></li><li><p>Choose Density of pump which to be calibrated.</p></li><li><p>Check on the Dosinglist Min&amp;Max kg/min<br><img src="/2020/12/15/siemens-6/dosing.JPG"> </p></li><li><p>choose the current Density</p></li><li><p>Point1 –&gt;&gt; 20% of Max –&gt;&gt; click —&gt;&gt; wait until Calculated value increase/decrease to the same as Set value (only 1% in tolerance) –&gt;&gt; click –&gt;&gt;Measured value the same as Set value –&gt;&gt; Click</p></li><li><p>SF7 –&gt;&gt; SF8 commit and confirm the parameters<br><img src="/2020/12/15/siemens-6/calibrationpump.jpg"> </p></li></ol><p>P.S.  SF9 is used for give an number of (0…10000) means (0…10V) (MIN 1… MAX 15kg/min) to set the speed. </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MultiFlex/QFM project experience No.3 (festo / pump production&amp;recirculation / motor control wizard)</title>
       <link href="2020/12/14/siemens-5/"/>
       <url>2020/12/14/siemens-5/</url>
