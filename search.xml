@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MultiFlex/QFM project experience No.5 (cutter / rotary switch / limit switch / segments status / ups)</title>
+      <link href="2020/12/16/siemens-7/"/>
+      <url>2020/12/16/siemens-7/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>Multiflex has two cutters left&amp;right<br>when after calibrate the screen which mentioned in the (Exoerience No.2) must use meter ruler to double check the values<br><img src="/2020/12/16/siemens-7/cutting.jpg"> </p></li><li><p>For the segments status , putty status first move segment to low position and check the values from putty insulmeter if out of range then modified the insulmeter<br>Mechanical limit not the same position as the software limit position need a bit far .<br><img src="/2020/12/16/siemens-7/segmentstatus.JPG"><br>after calibrated can check the things on the PDE<br><img src="/2020/12/16/siemens-7/check.JPG"> </p></li><li><p>Ups if red circle is flashing and alarms means Power supply is not ready<br><img src="/2020/12/16/siemens-7/ups.jpg"> </p></li><li><p>rotary switch also with putty insulmeter<br><img src="/2020/12/16/siemens-7/rotaryswitch.jpg"> </p></li><li><p>this kind of limit switches led lights for see (power and activated status)<br><img src="/2020/12/16/siemens-7/switch1.jpg"><br><img src="/2020/12/16/siemens-7/switch2.jpg"><br><img src="/2020/12/16/siemens-7/switch3.jpg"> </p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MultiFlex/QFM project experience No.4 (calibrate the pump)</title>
       <link href="2020/12/15/siemens-6/"/>
       <url>2020/12/15/siemens-6/</url>
