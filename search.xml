@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MultiFlex/QFM project experience No.7 (PLC programs)</title>
+      <link href="2020/12/21/siemens-9/"/>
+      <url>2020/12/21/siemens-9/</url>
+      
+        <content type="html"><![CDATA[<p>Commissioning Process </p><ol><li>check 24V voltage logic/ safety circuit and power on </li><li>download hardware configuration to PLC and configure the frequency &amp; Motor optimization</li><li>run main conveyor/ sidewall/ connecting conveyor/ control belt same time same speed </li><li>configure the segments , auto/manual to upper/lower position</li><li>configure the pumps / flowmeter/ waterlevel / temperature sensor / hydralic / boosters…</li><li>…</li></ol><p>PLC logics structure.</p><ol><li>Dry Part<br><img src="/2020/12/21/siemens-9/drypart.JPG"><br>(1) CallConveyors[FB18]<br>include main conveyor 100T1/ Sidewall Left 101T1/ Sidewall Right 102T1/ Connecting Belt 103T1/ Conveyor Belt 104T1/ Block height Measurement 1~8<br>(2) CallCuttingRoller[FB21]<br>paper Knife<br>(3) CallFoamWall[FB20]<br>Sidewall 107T1 to control the Horizontal move inside/outside<br>(4) CallPaper[FB7]<br>120T1 121T1 122T1 123T1<br>(5) CallPortal[FB70]<br>move segment1&amp;2 portal forward/backward<br>(6) CallSegments[FB2]<br>Segments 1…7 move up/down<br>(7) CallStripWinder[FB34]<br>124T1 125T1 </li><li>PDE data<br><img src="/2020/12/21/siemens-9/pde.JPG"> </li><li>Tank Storage<br><img src="/2020/12/21/siemens-9/tankstorage.JPG"><br>interface for the customer</li><li>Wet Part<br><img src="/2020/12/21/siemens-9/wetpart.JPG"><br>(1) Call Additive Components[FB15] / Call Colour Components[FB17] / Call ISO Components[FB14] / Call Novalflex Components[FB29] / Call Polyol Components[FB9]<br>all used for the pumps include (Production/recirculation values .. frequency…)<br>(2) CallMixer[FB27]<br>Mixer running / Mixer up&amp;down logic</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MultiFlex/QFM project experience No.6 (Motor wire width / Dt35 teach / Sidewall width putty / motor wire connection)</title>
       <link href="2020/12/21/siemens-8/"/>
       <url>2020/12/21/siemens-8/</url>
