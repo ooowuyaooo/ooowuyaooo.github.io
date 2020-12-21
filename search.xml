@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MultiFlex/QFM project experience No.6 (Motor wire width / Dt35 teach / Sidewall width putty / motor wire connection)</title>
+      <link href="2020/12/21/siemens-8/"/>
+      <url>2020/12/21/siemens-8/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>After configurate the motors “Motor Optimization” needed , one parameter should be set.<br><img src="/2020/12/21/siemens-8/motorwire.JPG"><br>values according to this formula<br><img src="/2020/12/21/siemens-8/wirewidth.JPG"> </p></li><li><p>For Conveyor-100T1 / ConvBelt 103T1 / ConvBelt 104T1 need additional settings<br><img src="/2020/12/21/siemens-8/technologycontrol.JPG"> </p></li><li><p>DT35 plug wire connection<br><img src="/2020/12/21/siemens-8/Dt35wireconnection.JPG"> </p></li><li><p>DT35 teach expire time<br><img src="/2020/12/21/siemens-8/teachexpiretime.JPG"></p></li><li><p>DT35 teach process<br><img src="/2020/12/21/siemens-8/teach1.JPG"><br><img src="/2020/12/21/siemens-8/teach2.JPG"><br><img src="/2020/12/21/siemens-8/teach3.JPG"><br><img src="/2020/12/21/siemens-8/teach4.JPG"></p></li><li><p>Putty inclinometer for Sidewall Width adjustment, one black bridge controls the sensitive for the actual width measurement , if not bridge the range will be decreased and more stable<br><img src="/2020/12/21/siemens-8/sidewallwidth.jpg"></p></li><li><p>Double 🔺 motor connection<br><img src="/2020/12/21/siemens-8/motorconnectionpic.jpg"><br><img src="/2020/12/21/siemens-8/motorconnectionreal.jpg"></p></li><li><p>🔺 motor connection but half<br><img src="/2020/12/21/siemens-8/motorconnectionpic1.jpg"><br><img src="/2020/12/21/siemens-8/motorconnectionreal1.jpg"></p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MultiFlex/QFM project experience No.5 (cutter / rotary switch / limit switch / segments status / ups)</title>
       <link href="2020/12/16/siemens-7/"/>
       <url>2020/12/16/siemens-7/</url>
