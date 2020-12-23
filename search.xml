@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MultiFlex/QFM project experience No.8 (Simens Count module for Flowmeter &quot;-1&quot; issue)</title>
+      <link href="2020/12/21/siemens-10/"/>
+      <url>2020/12/21/siemens-10/</url>
+      
+        <content type="html"><![CDATA[<p>If use 6ES7138-4DA04-0AB0 Count 24V/100kHz module for flowmeter function and monitor the value as “-1” in the PLC.<br><img src="/2020/12/21/siemens-10/minus1.JPG"> </p><p>in the Selection tool there will be a alarm<br><img src="/2020/12/21/siemens-10/poweroverload.JPG"></p><p>so one extra power mudule needed.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MultiFlex/QFM project experience No.7 (PLC programs)</title>
       <link href="2020/12/21/siemens-9/"/>
       <url>2020/12/21/siemens-9/</url>
