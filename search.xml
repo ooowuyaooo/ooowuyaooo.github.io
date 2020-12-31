@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MySql multi-table inquiry</title>
+      <link href="2020/12/31/mysql-2/"/>
+      <url>2020/12/31/mysql-2/</url>
+      
+        <content type="html"><![CDATA[<ol><li>establish three tables<br><img src="/2020/12/31/mysql-2/course.JPG"><br><img src="/2020/12/31/mysql-2/platform.JPG"><br><img src="/2020/12/31/mysql-2/playrecord.JPG"></li></ol><p>with this formula<br><img src="/2020/12/31/mysql-2/inquiry.JPG"></p><p>a represent the table(course)<br>b represent the table(play_record)<br>c represent the table(platforms)</p><p>then you can use a.course_name ..</p><p>order by is ranking the datas by a.course_id</p><p><img src="/2020/12/31/mysql-2/result.JPG"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>How to establish one WPF windows software No.1 (Login view)</title>
       <link href="2020/12/25/csharp-1/"/>
       <url>2020/12/25/csharp-1/</url>
