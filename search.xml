@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>群晖docker hass.io 提示 Your installation is running in an unhealthy state. 导致add-on 无法安装</title>
+      <link href="2021/01/26/homeassistant-1/"/>
+      <url>2021/01/26/homeassistant-1/</url>
+      
+        <content type="html"><![CDATA[<p>群晖docker里的hass.io由于版本问题会导致add-on无法安装的时候，要么降级，要么就采用以下方法，来自官网。<br>it you see this<br><img src="/2021/01/26/homeassistant-1/unhealthy.JPG"> </p><p>please<br><img src="/2021/01/26/homeassistant-1/jobs.JPG"><br><img src="/2021/01/26/homeassistant-1/jobs1.JPG"> </p><p>then you will see this in logs it means successfully ignore the unhealthy status<br><img src="/2021/01/26/homeassistant-1/logs.JPG"> </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Homeassistant </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MySql multi-table inquiry</title>
       <link href="2020/12/31/mysql-2/"/>
       <url>2020/12/31/mysql-2/</url>
