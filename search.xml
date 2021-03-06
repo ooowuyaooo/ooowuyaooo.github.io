@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>How to set up raspberry QT developing environment(1)</title>
+      <link href="2021/03/06/qt-1/"/>
+      <url>2021/03/06/qt-1/</url>
+      
+        <content type="html"><![CDATA[<p>Step 1. download the raspian and installed .<br>     2. change to domestic source<br>        # 编辑 <code>/etc/apt/sources.list</code> 文件，删除原文件所有内容，用以下内容取代：<br>        deb <a href="http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/">http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/</a> buster main non-free contrib rpi<br>        deb-src <a href="http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/">http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/</a> buster main non-free contrib rpi</p><pre><code>    # 编辑 `/etc/apt/sources.list.d/raspi.list` 文件，删除原文件所有内容，用以下内容取代：    deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui 3. sudo apt-get update / sudo apt-get upgrade  4. sudo apt-get install qt5-default    sudo apt-get install qtcreator    sudo apt-get install qtmultimedia5-dev    sudo apt-get install libqt5serialport5-dev 5. if cannot find kits or a triangle with yellow ! sign that     sudo apt-get install qtdeclarative5-dev     FIX this issue!!! 6. then open the icon qtcreator and build one new projects  7. end </code></pre><p><img src="/2021/03/06/qt-1/1.jpg"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Raspberry&amp;QT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>群晖docker hass.io 提示 Your installation is running in an unhealthy state. 导致add-on 无法安装</title>
       <link href="2021/01/26/homeassistant-1/"/>
       <url>2021/01/26/homeassistant-1/</url>
