@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>How to set up Unbuntu21.04 LTS QT developing environment(1)</title>
+      <link href="2021/03/21/qt-2/"/>
+      <url>2021/03/21/qt-2/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>download  <a href="https://download.qt.io/archive/qt/">https://download.qt.io/archive/qt/</a> latest 5.14.2</p></li><li><p>chmod +x 加权限</p></li><li><p>./filename.run</p></li><li><p>sudo apt-get install g++ (c++ complier)</p></li><li><p>sudo apt-get install libfontconfig1 (font library)</p></li><li><p>sudo apt-get install build-essential (if no complier found)</p></li></ol><p>OK enjoy </p><p>source :  ( aliyun no g++. use tsinghua source)<br>#添加阿里源<br>deb <a href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> focal main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> focal main restricted universe multiverse<br>deb <a href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> focal-security main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> focal-security main restricted universe multiverse<br>deb <a href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> focal-updates main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> focal-updates main restricted universe multiverse<br>deb <a href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> focal-proposed main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> focal-proposed main restricted universe multiverse<br>deb <a href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> focal-backports main restricted universe multiverse<br>deb-src <a href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a> focal-backports main restricted universe multiverse<br>#添加清华源<br>deb <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/">https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</a> focal main restricted universe multiverse</p><h1 id="deb-src-https-mirrors-tuna-tsinghua-edu-cn-ubuntu-focal-main-restricted-universe-multiverse"><a href="#deb-src-https-mirrors-tuna-tsinghua-edu-cn-ubuntu-focal-main-restricted-universe-multiverse" class="headerlink" title="deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse"></a>deb-src <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/">https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</a> focal main restricted universe multiverse</h1><p>deb <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/">https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</a> focal-updates main restricted universe multiverse</p><h1 id="deb-src-https-mirrors-tuna-tsinghua-edu-cn-ubuntu-focal-updates-main-restricted-universe-multiverse"><a href="#deb-src-https-mirrors-tuna-tsinghua-edu-cn-ubuntu-focal-updates-main-restricted-universe-multiverse" class="headerlink" title="deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse"></a>deb-src <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/">https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</a> focal-updates main restricted universe multiverse</h1><p>deb <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/">https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</a> focal-backports main restricted universe multiverse</p><h1 id="deb-src-https-mirrors-tuna-tsinghua-edu-cn-ubuntu-focal-backports-main-restricted-universe-multiverse"><a href="#deb-src-https-mirrors-tuna-tsinghua-edu-cn-ubuntu-focal-backports-main-restricted-universe-multiverse" class="headerlink" title="deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse"></a>deb-src <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/">https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</a> focal-backports main restricted universe multiverse</h1><p>deb <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/">https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</a> focal-security main restricted universe multiverse</p><h1 id="deb-src-https-mirrors-tuna-tsinghua-edu-cn-ubuntu-focal-security-main-restricted-universe-multiverse-multiverse"><a href="#deb-src-https-mirrors-tuna-tsinghua-edu-cn-ubuntu-focal-security-main-restricted-universe-multiverse-multiverse" class="headerlink" title="deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse multiverse"></a>deb-src <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/">https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</a> focal-security main restricted universe multiverse multiverse</h1>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Ubuntu&amp;QT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to set up raspberry QT developing environment(1)</title>
+      <link href="2021/03/06/qt-1/"/>
+      <url>2021/03/06/qt-1/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>download the raspian and installed .</p></li><li><p>change to domestic source </p><pre><code> # 编辑 `/etc/apt/sources.list` 文件，删除原文件所有内容，用以下内容取代： deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib rpi deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib rpi # 编辑 `/etc/apt/sources.list.d/raspi.list` 文件，删除原文件所有内容，用以下内容取代： deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui</code></pre></li><li><p>sudo apt-get update / sudo apt-get upgrade </p></li><li><p>sudo apt-get install qt5-default<br>sudo apt-get install qtcreator<br>sudo apt-get install qtmultimedia5-dev<br>sudo apt-get install libqt5serialport5-dev</p></li><li><p>if cannot find kits or a triangle with yellow ! sign that<br>sudo apt-get install qtdeclarative5-dev </p><pre><code> FIX this issue!!!</code></pre></li><li><p>then open the icon qtcreator and build one new projects </p></li><li><p>end<br><img src="/2021/03/06/qt-1/1.JPG"></p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Raspberry&amp;QT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>群晖docker hass.io 提示 Your installation is running in an unhealthy state. 导致add-on 无法安装</title>
+      <link href="2021/01/26/homeassistant-1/"/>
+      <url>2021/01/26/homeassistant-1/</url>
+      
+        <content type="html"><![CDATA[<p>群晖docker里的hass.io由于版本问题会导致add-on无法安装的时候，要么降级，要么就采用以下方法，来自官网。<br>it you see this<br><img src="/2021/01/26/homeassistant-1/unhealthy.JPG"> </p><p>please<br><img src="/2021/01/26/homeassistant-1/jobs.JPG"><br><img src="/2021/01/26/homeassistant-1/jobs1.JPG"> </p><p>then you will see this in logs it means successfully ignore the unhealthy status<br><img src="/2021/01/26/homeassistant-1/logs.JPG"> </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Homeassistant </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySql multi-table inquiry</title>
+      <link href="2020/12/31/mysql-2/"/>
+      <url>2020/12/31/mysql-2/</url>
+      
+        <content type="html"><![CDATA[<ol><li>establish three tables<br><img src="/2020/12/31/mysql-2/course.JPG"><br><img src="/2020/12/31/mysql-2/platform.JPG"><br><img src="/2020/12/31/mysql-2/playrecord.JPG"></li></ol><p>with this formula<br><img src="/2020/12/31/mysql-2/inquiry.JPG"></p><p>a represent the table(course)<br>b represent the table(play_record)<br>c represent the table(platforms)</p><p>then you can use a.course_name ..</p><p>order by is ranking the datas by a.course_id</p><p><img src="/2020/12/31/mysql-2/result.JPG"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to establish one WPF windows software No.1 (Login view)</title>
+      <link href="2020/12/25/csharp-1/"/>
+      <url>2020/12/25/csharp-1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C# WPF </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MultiFlex/QFM project experience No.9 (Phoenix Hybrid motor starter for reversing 3~AC motor 2900574)</title>
+      <link href="2020/12/24/siemens-11/"/>
+      <url>2020/12/24/siemens-11/</url>
+      
+        <content type="html"><![CDATA[<p>Configure method<br><img src="/2020/12/24/siemens-11/module.JPG"><br><img src="/2020/12/24/siemens-11/parameter.JPG"> </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MultiFlex/QFM project experience No.8 (Simens Count module for Flowmeter &quot;-1&quot; issue)</title>
+      <link href="2020/12/21/siemens-10/"/>
+      <url>2020/12/21/siemens-10/</url>
+      
+        <content type="html"><![CDATA[<p>If use 6ES7138-4DA04-0AB0 Count 24V/100kHz module for flowmeter function and monitor the value as “-1” in the PLC.<br><img src="/2020/12/21/siemens-10/minus1.JPG"> </p><p>in the Selection tool there will be a alarm<br><img src="/2020/12/21/siemens-10/poweroverload.JPG"></p><p>so one extra power mudule needed.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MultiFlex/QFM project experience No.7 (PLC programs)</title>
+      <link href="2020/12/21/siemens-9/"/>
+      <url>2020/12/21/siemens-9/</url>
+      
+        <content type="html"><![CDATA[<p>Commissioning Process </p><ol><li>check 24V voltage logic/ safety circuit and power on </li><li>download hardware configuration to PLC and configure the frequency &amp; Motor optimization</li><li>run main conveyor/ sidewall/ connecting conveyor/ control belt same time same speed </li><li>configure the segments , auto/manual to upper/lower position</li><li>configure the pumps / flowmeter/ waterlevel / temperature sensor / hydralic / boosters…</li><li>…</li></ol><p>PLC logics structure.</p><ol><li>Dry Part<br><img src="/2020/12/21/siemens-9/drypart.JPG"><br>(1) CallConveyors[FB18]<br>include main conveyor 100T1/ Sidewall Left 101T1/ Sidewall Right 102T1/ Connecting Belt 103T1/ Conveyor Belt 104T1/ Block height Measurement 1~8<br>(2) CallCuttingRoller[FB21]<br>paper Knife<br>(3) CallFoamWall[FB20]<br>Sidewall 107T1 to control the Horizontal move inside/outside<br>(4) CallPaper[FB7]<br>120T1 121T1 122T1 123T1<br>(5) CallPortal[FB70]<br>move segment1&amp;2 portal forward/backward<br>(6) CallSegments[FB2]<br>Segments 1…7 move up/down<br>(7) CallStripWinder[FB34]<br>124T1 125T1 </li><li>PDE data<br><img src="/2020/12/21/siemens-9/pde.JPG"> </li><li>Tank Storage<br><img src="/2020/12/21/siemens-9/tankstorage.JPG"><br>interface for the customer</li><li>Wet Part<br><img src="/2020/12/21/siemens-9/wetpart.JPG"><br>(1) Call Additive Components[FB15] / Call Colour Components[FB17] / Call ISO Components[FB14] / Call Novalflex Components[FB29] / Call Polyol Components[FB9]<br>all used for the pumps include (Production/recirculation values .. frequency…)<br>(2) CallMixer[FB27]<br>Mixer running / Mixer up&amp;down logic</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MultiFlex/QFM project experience No.6 (Motor wire width / Dt35 teach / Sidewall width putty / motor wire connection)</title>
+      <link href="2020/12/21/siemens-8/"/>
+      <url>2020/12/21/siemens-8/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>After configurate the motors “Motor Optimization” needed , one parameter should be set.<br><img src="/2020/12/21/siemens-8/motorwire.JPG"><br>values according to this formula<br><img src="/2020/12/21/siemens-8/wirewidth.JPG"> </p></li><li><p>For Conveyor-100T1 / ConvBelt 103T1 / ConvBelt 104T1 need additional settings<br><img src="/2020/12/21/siemens-8/technologycontrol.JPG"> </p></li><li><p>DT35 plug wire connection<br><img src="/2020/12/21/siemens-8/Dt35wireconnection.JPG"> </p></li><li><p>DT35 teach expire time<br><img src="/2020/12/21/siemens-8/teachexpiretime.JPG"></p></li><li><p>DT35 teach process<br><img src="/2020/12/21/siemens-8/teach1.JPG"><br><img src="/2020/12/21/siemens-8/teach2.JPG"><br><img src="/2020/12/21/siemens-8/teach3.JPG"><br><img src="/2020/12/21/siemens-8/teach4.JPG"></p></li><li><p>Putty inclinometer for Sidewall Width adjustment, one black bridge controls the sensitive for the actual width measurement , if not bridge the range will be decreased and more stable<br><img src="/2020/12/21/siemens-8/sidewallwidth.jpg"></p></li><li><p>Double 🔺 motor connection<br><img src="/2020/12/21/siemens-8/motorconnectionpic.jpg"><br><img src="/2020/12/21/siemens-8/motorconnectionreal.jpg"></p></li><li><p>🔺 motor connection but half<br><img src="/2020/12/21/siemens-8/motorconnectionpic1.jpg"><br><img src="/2020/12/21/siemens-8/motorconnectionreal1.jpg"></p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MultiFlex/QFM project experience No.5 (cutter / rotary switch / limit switch / segments status / ups)</title>
+      <link href="2020/12/16/siemens-7/"/>
+      <url>2020/12/16/siemens-7/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>Multiflex has two cutters left&amp;right<br>when after calibrate the screen which mentioned in the (Exoerience No.2) must use meter ruler to double check the values<br><img src="/2020/12/16/siemens-7/cutting.jpg"> </p></li><li><p>For the segments status , putty status first move segment to low position and check the values from putty insulmeter if out of range then modified the insulmeter<br>Mechanical limit not the same position as the software limit position need a bit far .<br><img src="/2020/12/16/siemens-7/segmentstatus.JPG"><br>after calibrated can check the things on the PDE<br><img src="/2020/12/16/siemens-7/check.JPG"> </p></li><li><p>Ups if red circle is flashing and alarms means Power supply is not ready<br><img src="/2020/12/16/siemens-7/ups.jpg"> </p></li><li><p>rotary switch also with putty insulmeter<br><img src="/2020/12/16/siemens-7/rotaryswitch.jpg"> </p></li><li><p>this kind of limit switches led lights for see (power and activated status)<br><img src="/2020/12/16/siemens-7/switch1.jpg"><br><img src="/2020/12/16/siemens-7/switch2.jpg"><br><img src="/2020/12/16/siemens-7/switch3.jpg"> </p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MultiFlex/QFM project experience No.4 (calibrate the pump)</title>
+      <link href="2020/12/15/siemens-6/"/>
+      <url>2020/12/15/siemens-6/</url>
+      
+        <content type="html"><![CDATA[<p>First of all BUTTON”Pump start” cannot be activated if machine has faults.</p><ol><li><p>Go into DB25 to check the Pumpstop signals<br><img src="/2020/12/15/siemens-6/faultlist.JPG"> </p></li><li><p>check PDE Screen Calibration–&gt;Operation–&gt;Pumps</p></li><li><p>GOTO–&gt;&gt; Calibration , Choose Density of pump which to be calibrated.<br>(1). add/modify the density<br><img src="/2020/12/15/siemens-6/density.jpg"></p></li><li><p>Check the Dosinglist Min&amp;Max kg/min<br><img src="/2020/12/15/siemens-6/dosing.JPG"><br>check on the drawings , endress+hause available?<br>if there choose the Massflow<br><img src="/2020/12/15/siemens-6/endress.JPG"><br>For the Set/Actual Multipicator from the values of previous project for reference after caibration it will automatically change .<br><img src="/2020/12/15/siemens-6/Untitled.jpg"></p></li><li><p>choose the current Density</p></li><li><p>Point1 –&gt;&gt; 20% of Max –&gt;&gt; click —&gt;&gt; wait until Calculated value increase/decrease to the same as Set value (only 1% in tolerance) –&gt;&gt; click –&gt;&gt;Measured value the same as Set value –&gt;&gt; Click</p></li><li><p>SF7 –&gt;&gt; SF8 commit and confirm the parameters<br><img src="/2020/12/15/siemens-6/calibrationpump.jpg"> </p></li><li><p>For the double check . if the Min..Max is 0.15…1.5 and Density is 1.05 then multiple both is the result 0.155<br>open the calibration window again and input the 0.155 as the Set value then start the pump wait and see the Calcalated value will be identical to the Set value (1% in tolerance)</p></li></ol><p>P.S.  SF9 is used for give an number of (0…10000) means (0…10V) (MIN 1… MAX 15kg/min) to set the speed. </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MultiFlex/QFM project experience No.3 (festo / pump production&amp;recirculation / motor control wizard)</title>
+      <link href="2020/12/14/siemens-5/"/>
+      <url>2020/12/14/siemens-5/</url>
+      
+        <content type="html"><![CDATA[<p>The method to teach the festo remote module</p><ol><li>download the assigned ip address to the festo module from the hardware configuration Tia</li><li>open the ip address in the browser to check the alarms</li><li>if red light flashing on the module then try to teach </li><li>remove the supply power wire a little then press the button in red square then reconnect the supply wire</li><li>when after 3 seconds then release the button , two buttons one by one</li><li>no red flashing all green , over.<br><img src="/2020/12/14/siemens-5/festo.jpg"> </li></ol><p>if the same parameter but the motor output P not enough better change in the motor commissiong wizard<br>from U/F characteristic control to speed control encoderless<br><img src="/2020/12/14/siemens-5/UFcontrol.JPG"><br><img src="/2020/12/14/siemens-5/speedcontrol.JPG"> </p><p>in the Call pump program block<br>the Production and Recirculation valve can only one be activated at the same time<br>so check here with the switch which on the control panel<br><img src="/2020/12/14/siemens-5/Productionandrecirulation.JPG"> </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MultiFlex/QFM project experience No.2 (putty / segments / display)</title>
+      <link href="2020/12/11/siemens-4/"/>
+      <url>2020/12/11/siemens-4/</url>
+      
+        <content type="html"><![CDATA[<p>putty has 3 legs . 1 and 3 output , 2 input it means we have to connect 10V to 1&amp;3 , 2 to PLC to get the values<br><img src="/2020/12/11/siemens-4/putty.jpg"> </p><p>the number display which installed on the control cabinet CP40 can show the numbers but calibration needed<br>first time move to the minimum position and measure the actual distance then put it into display<br>second time move the maximum position do the same thing<br>after saw the “Store” then finished, if the Linear calculation is ok then the numbers is ok as you want.<br><img src="/2020/12/11/siemens-4/display.JPG"> </p><p>in the PLC Dry parts/Call segments<br>this block is to check the alarms and the segments general status such as the all segments in Pos..<br><img src="/2020/12/11/siemens-4/general.JPG"> </p><p>in this segment detail block<br>i_act means the acutal voltage value(0…27648)<br>q_act means the actucal voltage value converted the (0…10000) means (0…10V) easier to understand<br>i_max &amp; i_min means the software limits , little before the mechanical limits only works in automatic mode<br>i_top &amp; i_bot is the mechanical limits<br>q_fltMax &amp; q_fltMin means mechanical limits activated<br><img src="/2020/12/11/siemens-4/segment.JPG"> </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MultiFlex/QFM project experience No.1 (G120C speed settings/ safety / putty)</title>
+      <link href="2020/12/09/siemens-3/"/>
+      <url>2020/12/09/siemens-3/</url>
+      
+        <content type="html"><![CDATA[<p>All the conveyor here are using P2000 to control the real speed it can be modified little here<br><img src="/2020/12/09/siemens-3/11.JPG"><br>if modified and seems not worked then check here<br><img src="/2020/12/09/siemens-3/22.JPG"><br>these parameters also be set  during the Commissioning Wizard<br><img src="/2020/12/09/siemens-3/33.JPG"> </p><p>if using the speed control(encoderless) motor with putty insulmeter then one param needed<br><img src="/2020/12/09/siemens-3/44.JPG"><br>double check the wiring </p><p>with the STO key to control the safty function you must set param here<br>Basic Fcuntions<br><img src="/2020/12/09/siemens-3/55.JPG"><br>Control type –&gt;&gt; via terminals   (check wiring)<br><img src="/2020/12/09/siemens-3/66.JPG"><br>Also the Acceptance test needed<br><img src="/2020/12/09/siemens-3/77.JPG"><br>check the safty Input according to the drawing (16/17 are using for safty)<br><img src="/2020/12/09/siemens-3/88.JPG"> </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Modify device network parameter while doing the configuration on TiaPortal software</title>
+      <link href="2020/12/04/siemens-2/"/>
+      <url>2020/12/04/siemens-2/</url>
+      
+        <content type="html"><![CDATA[<p>Software needed: </p><ol><li>TiaPortal </li><li>Proneta </li></ol><p>If sometimes wanna to modify one device network parameter if just use the proneta to reset, it will be a alarm that “reset failed” and you can see the Ip address and Mac address turn to Null but after a while maybe 30 seconds it turns back<br>how to solve this issues ? it because of the PLC write it back </p><p>so the first thing is unplug the PLC<br><img src="/2020/12/04/siemens-2/S2.jpg"><br>then use proneta to reset the network parameter<br><img src="/2020/12/04/siemens-2/S1.jpg"></p><p>after that you can configure the right things in the TiaPortal software as you usually did.  </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Visual Studio 2019 C++ Environment issue</title>
+      <link href="2020/11/18/cplus-1/"/>
+      <url>2020/11/18/cplus-1/</url>
+      
+        <content type="html"><![CDATA[<p>While using Visual Studio 2019 establish C++ projects compiling the projects found out issues that “No such files XXXX.h”<br>After checking solution on the internet that<br><img src="/2020/11/18/cplus-1/a.png"><br>checking your windows version that<br><img src="/2020/11/18/cplus-1/b.png"><br>so you have to install the windows SDK software which match your windows version<br>previously i installed the windows 10SDK(10.0.18362.0) it caused lots of issues then removed and use Windows SDK(10.0.19041.0)instead .<br>Then everything goes well </p><p>no more fault while compiling the projects.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Italian cutting machine domestic commissioning experience</title>
+      <link href="2020/11/10/siemens-1/"/>
+      <url>2020/11/10/siemens-1/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>Festo Cpx module<br>In Tia portal software assign the Ip address for Festo CPX module and then open browser the Ip address<br>you will see the pics below<br><img src="/2020/11/10/siemens-1/siemens_1_1.jpg"><br>it will be some alarms on that<br>Everytime change the configuration remember press the button which on the CPI module top left 3~5 seconds and then unplug the power and plug on .</p></li><li><p>the wire connection inside cabinet<br><img src="/2020/11/10/siemens-1/siemens_1_2.jpg"><br>9200 DI4<br>9201 DI5</p></li><li><p>The Power connector on the Simotion modules<br><img src="/2020/11/10/siemens-1/siemens_1_3.jpg"><br>or the LEDS on the modules OFF</p></li><li><p>Hardware configuration below<br><img src="/2020/11/10/siemens-1/siemens_1_4.jpg"><br><img src="/2020/11/10/siemens-1/siemens_1_5.jpg"></p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows下安装MySQL详细教程</title>
+      <link href="2020/11/10/mysql-1/"/>
+      <url>2020/11/10/mysql-1/</url>
+      
+        <content type="html"><![CDATA[<p>Using windows docker version&lt;2.5.0.0 installed mysql/sqlserver/influxdb/nodered.etc… everything running well but after one time updated to 2.5.0.0 alles kaputt.<br>Big error during starting dockers .. time out and lots of unrecognized faults. </p><p>then search the mothod about directly install the mysql on the windows </p><p>Windows下安装MySQL详细教程<br>下载地址：<a href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a><br><img src="/2020/11/10/mysql-1/mysql_1.png"><br>点击下载之后，可以选择注册Oracle账号，也可以跳过直接下载。<br><img src="/2020/11/10/mysql-1/mysql_2.png"></p><p>配置环境变量<br>变量名：MYSQL_HOME<br>变量值：C:\software<br>(extract your download files to C:\software)<br><img src="/2020/11/10/mysql-1/mysql_3.png"></p><p>administrator ways to run CMD<br>进入C:\software\mysql-8.0.19-winx64.zip\mysql-8.0.19-winx64\bin下<br><img src="/2020/11/10/mysql-1/mysql_4.png"></p><p>执行命令：mysqld –initialize-insecure –user=mysql  在C:\software\mysql-8.0.19-winx64.zip\mysql-8.0.19-winx64下和bin同级目录生成data目录<br><img src="/2020/11/10/mysql-1/mysql_5.png"></p><p>mysqld -install<br><img src="/2020/11/10/mysql-1/mysql_6.png"></p><p>net start MySQL<br><img src="/2020/11/10/mysql-1/mysql_7.png"></p><p>登录mysql:(因为之前没设置密码，所以密码为空，不用输入密码，直接回车即可）<br>mysql -u root -p<br><img src="/2020/11/10/mysql-1/mysql_8.png"></p><p>查询用户密码命令：mysql&gt; select host,user,authentication_string from mysql.user;<br><img src="/2020/11/10/mysql-1/mysql_9.png"></p><p>设置（或修改）root用户密码mysql&gt; use mysql<br><img src="/2020/11/10/mysql-1/mysql_10.png"></p><p>修改密码 mysql&gt; ALTER USER ‘root’@’localhost’ IDENTIFIED WITH mysql_native_password BY ‘123456’;<br><img src="/2020/11/10/mysql-1/mysql_11.png"></p><p>保存设置 mysql&gt; flush privileges;<br><img src="/2020/11/10/mysql-1/mysql_12.png"></p><p>After restart the whole machine find out that the mysql server will start automatically when system booted. </p><p>Method from internet BruceLong</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Readme.txt</title>
+      <link href="2020/11/05/self/"/>
+      <url>2020/11/05/self/</url>
+      
+        <content type="html"><![CDATA[<div class="mermaid">pie    title My Skills    &quot;Siemens software&quot; : 30    &quot;Java&quot; : 25    &quot;C#&quot; : 25    &quot;Python&quot; :  5&quot;Pascal&quot; :  10&quot;Javascript&quot; :  3&quot;Database&quot; :  2</div><p>Lots of years immersed in industrial field for the OEM machine control.<br>World is changing, Industry 4.0 is coming….everything connected to the internet.</p><p>Siemens software include Step7/Microwin/Tia Portal/Scout/SIMOTION/Wincc/Wincc flexible/Hmi pro/Hmi lite …<br>Java in JavaFx/Swing focus on Windows Application .<br>C# in Winform / WPF /Asp.net core / Unity .<br>Pascal in Simotion for motion control logic .<br>Python for web spider .<br>Database only Mysql and SqlServer .</p><p>In lesure time play the RaspberryPi for the new things now is learning the Openrcv </p><p>Currently working at Bonfiglioli China Factory as a automation engineer force on the whole factory industry 4.0 optimization..</p><ol><li>ESOP software … </li><li>to be continued …</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Android Webview 增加加载progressbar</title>
+      <link href="2020/11/04/java-2/"/>
+      <url>2020/11/04/java-2/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/2020/11/04/java-2/aa.jpg"></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line">JAVA代码</span><br><span class="line"><span class="keyword">package</span> com.example.lx_webview;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.support.v7.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.text.TextUtils;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"><span class="keyword">import</span> android.webkit.WebChromeClient;</span><br><span class="line"><span class="keyword">import</span> android.webkit.WebSettings;</span><br><span class="line"><span class="keyword">import</span> android.webkit.WebView;</span><br><span class="line"><span class="keyword">import</span> android.webkit.WebViewClient;</span><br><span class="line"><span class="keyword">import</span> android.widget.Button;</span><br><span class="line"><span class="keyword">import</span> android.widget.EditText;</span><br><span class="line"><span class="keyword">import</span> android.widget.ProgressBar;</span><br><span class="line"><span class="keyword">import</span> android.widget.Toast;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.TimeUnit;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> <span class="keyword">implements</span> <span class="title">View</span>.<span class="title">OnClickListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> WebView www_wb;</span><br><span class="line">    <span class="keyword">private</span> ProgressBar webView_pb;</span><br><span class="line">    <span class="keyword">private</span> EditText path_et;</span><br><span class="line">    <span class="keyword">private</span> View btn;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        <span class="comment">//初始化</span></span><br><span class="line">        initView();</span><br><span class="line">        <span class="comment">//使用webview对象，进行初始化</span></span><br><span class="line">        webViewinit();</span><br><span class="line">        <span class="comment">//得到webviewSettings对webview进行初始化设置</span></span><br><span class="line">        webviewSettingSInit();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//点击事件</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">switch</span> (v.getId())&#123;</span><br><span class="line">            <span class="keyword">case</span> R.id.btn:</span><br><span class="line">                String trim = path_et.getText().toString().trim();</span><br><span class="line">                <span class="keyword">if</span> (TextUtils.isEmpty(trim))&#123;</span><br><span class="line">                    Toast.makeText(<span class="keyword">this</span>,<span class="string">&quot;不能输入为空&quot;</span>,Toast.LENGTH_SHORT).show();</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                www_wb.loadUrl(<span class="string">&quot;http://&quot;</span>+trim);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//得到webviewSettings对webview进行初始化设置</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">webviewSettingSInit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        WebSettings settings = www_wb.getSettings();</span><br><span class="line">        <span class="comment">//允许js交互</span></span><br><span class="line">        settings.setJavaScriptEnabled(<span class="keyword">true</span>);</span><br><span class="line">        <span class="comment">//设置可以支持缩放</span></span><br><span class="line">        settings.setSupportZoom(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//使用webview对象，进行初始化</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">webViewinit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//点击在App内执行</span></span><br><span class="line">        www_wb.setWebViewClient(<span class="keyword">new</span> WebViewClient());</span><br><span class="line">        <span class="comment">//WebView加载网页监听，其进度和我们的进度条相绑定，然后显示出我们也想的效果</span></span><br><span class="line">        www_wb.setWebChromeClient(<span class="keyword">new</span> WebChromeClient()&#123;</span><br><span class="line">            <span class="comment">//方法中的onProgressChanged就代表了其速度</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onProgressChanged</span><span class="params">(WebView view, <span class="keyword">int</span> newProgress)</span> </span>&#123;</span><br><span class="line">                <span class="comment">//首先我们的进度条是隐藏的</span></span><br><span class="line">                webView_pb.setVisibility(View.VISIBLE);</span><br><span class="line">                <span class="comment">//把网页加载的进度传给我们的进度条</span></span><br><span class="line">                webView_pb.setProgress(newProgress);</span><br><span class="line">                <span class="keyword">if</span> (newProgress == <span class="number">100</span>)&#123;</span><br><span class="line">                    <span class="comment">//加载完毕让进度条消失</span></span><br><span class="line">                    webView_pb.setVisibility(View.GONE);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">super</span>.onProgressChanged(view, newProgress);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//初始化</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">initView</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        path_et = findViewById(R.id.path_et);</span><br><span class="line">        webView_pb = findViewById(R.id.pb);</span><br><span class="line">        www_wb = findViewById(R.id.www_wb);</span><br><span class="line">        btn = findViewById(R.id.btn);</span><br><span class="line">        btn.setOnClickListener(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line">布局XML代码</span><br><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:orientation</span>=<span class="string">&quot;vertical&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--  用到了权重知识,progress进度条模式:style=&quot;?android:attr/progressBarStyleHorizontal&quot;  --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">LinearLayout</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:orientation</span>=<span class="string">&quot;horizontal&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">EditText</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/path_et&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:singleLine</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:hint</span>=<span class="string">&quot;请用户输入网址,直接从www开始即可&quot;</span></span></span><br><span class="line"><span class="tag">            /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Button</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/btn&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">&quot;加载网页&quot;</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">            /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">ProgressBar</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/pb&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">style</span>=<span class="string">&quot;?android:attr/progressBarStyleHorizontal&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:max</span>=<span class="string">&quot;100&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:visibility</span>=<span class="string">&quot;gone&quot;</span></span></span><br><span class="line"><span class="tag">        /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">WebView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/www_wb&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">WebView</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br><span class="line"></span><br><span class="line">progressbar样式</span><br><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">layer-list</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span> &gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">android:id</span>=<span class="string">&quot;@android:id/background&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">shape</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">&quot;5dp&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">gradient</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:angle</span>=<span class="string">&quot;0&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:centerColor</span>=<span class="string">&quot;#fff0f1f0&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:centerY</span>=<span class="string">&quot;0.75&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:endColor</span>=<span class="string">&quot;#ffdee0de&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:startColor</span>=<span class="string">&quot;#ffffffff&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">android:id</span>=<span class="string">&quot;@android:id/secondaryProgress&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">clip</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">shape</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">&quot;5dp&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">                <span class="tag">&lt;<span class="name">gradient</span></span></span><br><span class="line"><span class="tag">                    <span class="attr">android:angle</span>=<span class="string">&quot;0&quot;</span></span></span><br><span class="line"><span class="tag">                    <span class="attr">android:centerColor</span>=<span class="string">&quot;#F39801&quot;</span></span></span><br><span class="line"><span class="tag">                    <span class="attr">android:centerY</span>=<span class="string">&quot;0.75&quot;</span></span></span><br><span class="line"><span class="tag">                    <span class="attr">android:endColor</span>=<span class="string">&quot;#a0ffcb00&quot;</span></span></span><br><span class="line"><span class="tag">                    <span class="attr">android:startColor</span>=<span class="string">&quot;#80ffd300&quot;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">clip</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">android:id</span>=<span class="string">&quot;@android:id/progress&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">clip</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">shape</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">&quot;5dip&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">                <span class="tag">&lt;<span class="name">gradient</span></span></span><br><span class="line"><span class="tag">                    <span class="attr">android:angle</span>=<span class="string">&quot;0&quot;</span></span></span><br><span class="line"><span class="tag">                    <span class="attr">android:endColor</span>=<span class="string">&quot;#8000ff00&quot;</span></span></span><br><span class="line"><span class="tag">                    <span class="attr">android:startColor</span>=<span class="string">&quot;#80ff0000&quot;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">clip</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">layer-list</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Ubuntu 环境</title>
+      <link href="2020/11/04/ubuntu-1/"/>
+      <url>2020/11/04/ubuntu-1/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>install Node-red<br>sudo apt-get install nodejs<br>sudo apt-get install npm<br>sudo npm install -g node-red<br>node-red<br>在输入命令期间可能会出现如下这个问题<br>alexander@alexander-virtual-machine:~$ sudo apt-get install -y httpd<br>E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)<br>E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?<br>主要是后台还有apt进程<br>sudo rm /var/cache/apt/archives/lock<br>sudo rm /var/lib/dpkg/lock<br>sudo dpkg –configure -a<br>sudo apt-get update<br>然后重新输入上面的命令<br>127.0.0.1:1880登录。 </p></li><li><p>安装influxdb wget. deb64 </p></li><li><p>安装homeassistant frontend<br>pip3 install –upgrade home-assistant-frontend -i<br><a href="https://pypi.python.org/simple/">https://pypi.python.org/simple/</a> –trusted-host pypi.python.org</p></li><li><p>noderd 自启动 <a href="https://blog.csdn.net/Argon_Ghost/article/details/104481455">https://blog.csdn.net/Argon_Ghost/article/details/104481455</a><br>解决方法：<br>安装pm2：<br>npm install pm2 -gd<br>使用PM2启动Node-red：<br>pm2 start node-red<br>查看下启动项列表：<br>pm2 ls<br>如果加载成功会显示类似下面的内容：</p><p>root@:~# pm2 ls<br>┌─────┬─────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐<br>│ id  │ name        │ namespace   │ version │ mode    │ pid      │ uptime │ ?    │ status    │ cpu      │ mem      │ user     │ watching │<br>├─────┼─────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤<br>│ 0   │ node-red    │ default     │ N/A     │ fork    │ 3772     │ 22h    │ 1    │ online    │ 0.2%     │ 123.3mb  │ root     │ disabled │<br>└─────┴─────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘<br>设置pm2为自启进程：<br>sudo pm2 startup<br>注：这个命令执行后，系统会创建启动脚本，在Ubuntu18.04上是会自动添加软链接的，如果是别的版本，可能就需要你按照提示输出的命令去执行。 其它的版本可能会输出一些命令，按照提示复制到bash输入并回车就可以了，这一步其实就是添加一个系统自启服务。<br>保存pm2修改内容：<br>sudo pm2 save</p></li><li><p>Prometheus<br>sudo nano /etc/prometheus/prometheus.yml<br><a href="http://localhost/zabbix/api_jsonrpc.php">http://localhost/zabbix/api_jsonrpc.php</a></p></li><li><p>Grafana 邮件 sudo nano /etc/grafana/grafana.ini</p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>RasperryPi install hass.io and more</title>
+      <link href="2020/11/03/raspberrypi-1/"/>
+      <url>2020/11/03/raspberrypi-1/</url>
+      
+        <content type="html"><![CDATA[<ol><li>Format tool </li><li>Raspbian Buster with desktop <a href="https://www.raspberrypi.org/downloads/raspbian/">https://www.raspberrypi.org/downloads/raspbian/</a></li><li>download balenaEtcher <a href="https://www.balena.io/etcher/">https://www.balena.io/etcher/</a></li><li>flash system to TF card then will show two disks in your file-explorer</li><li>open the disk named boot , establish on empty SSH file</li><li>把TF卡插入树莓派4，然后启动。查看路由器中新增的设备，通过SSH软件进行访问，默认用户名密码为：pi/raspberry,进入系统。 用PUTTY</li><li>输入sudo raspi-config,进入如下界面。 选择4 Localisation Options</li><li>选择I2 Change Timezone-&gt;Asia-&gt;Shanghai，</li><li>Resolution 改成第三个 为了VNC能显示</li><li>VNC功能打开</li><li>退出（自动重启）</li><li>安装docker-ce<br>输入命令：sudo -i<br>              apt-get install software-properties-common<br>              apt-get update<br>              apt-get install -y apparmor-utils apt-transport-https avahi-daemon ca-certificates curl dbus jq network-manager socat<br>curl -fsSL get.docker.com | sh<br>其中，最后一步安装时间挺长的，请耐心等待 （亲测一个小时左右）（指令一条一条来，可以重复几遍，看成功没有）</li><li>12、安装hassio<br>curl -sL “<a href="https://raw.githubusercontent.com/home-assistant/hassio-installer/master/hassio_install.sh&quot;">https://raw.githubusercontent.com/home-assistant/hassio-installer/master/hassio_install.sh&quot;</a> | bash -s – -m raspberrypi4<br>（时间比较长，一直等到出现 [info]RUN HASS.IO 为止</li><li>安装完成</li><li>打开raspberry ip:8123 例如 192.168.1.13:8123 可能当时无法立即打开，等一会，估计十几分钟。</li><li>一直到能打开8123且看到蓝色房子，第一次需要十几二十分钟来初始化。</li><li>开启samba 电脑局域网访问树莓派文件。</li><li>sudo apt-get install samba<br>编辑samba的配置文件，把只读改改成可读写等，命令：sudo nano /etc/samba/smb.conf<br>将配置文件中的 read only =no<br>增加用户pi并设置密码：sudo smbpasswd -a pi<br>重启samba服务：sudo systemctl restart smbd</li><li>电脑CMD输入，映射到电脑Y盘  net use y:  \树莓派IP地址\pi 登录密码  /user:pi<br><a href="https://bbs.hassbian.com/thread-8044-1-1.html">https://bbs.hassbian.com/thread-8044-1-1.html</a> 添加configuration tool 可以直接在界面改configuration.Yaml</li><li>树莓派连接蓝牙设备 手机下载 蓝牙调试器 查看家里蓝牙设备MAC地址</li><li>For Example : connect 88:2D:53:11:C3:D0 trust 88:2D:53:11:C3:D0 </li><li>设置 自启动   sudo crontab -e       @reboot sleep 15 &amp;&amp; echo “connect 88:2D:53:11:C3:D0” | bluetoothctl</li></ol><p>以上是纯净系统安装hass.io的老方法，比较容易出问题且网速无法保证。<br>目前采用最简易的办法，就是下载hachina上装有hass.io的镜像就可以了，省去了很多的麻烦。<br><a href="https://www.hachina.io/docs/23131.html">https://www.hachina.io/docs/23131.html</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Raspberry Pi </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Android Webview 添加下拉刷新和删除缓存功能</title>
+      <link href="2020/11/03/java-1/"/>
+      <url>2020/11/03/java-1/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//XML 文件写法</span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">android.support.v4.widget.SwipeRefreshLayout</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/swipe_container&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span> &gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">WebView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">&quot;@+id/wv&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">WebView</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">android.support.v4.widget.SwipeRefreshLayout</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//JAVA写法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebViewActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> WebView mBtnWv;</span><br><span class="line">    <span class="keyword">private</span> SwipeRefreshLayout swipeRefreshLayout; <span class="comment">//下拉刷新</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_web_view);</span><br><span class="line">        mBtnWv = findViewById(R.id.wv);</span><br><span class="line">        getSupportActionBar().hide();<span class="comment">//隐藏标题栏</span></span><br><span class="line">        <span class="comment">// 加载本地html</span></span><br><span class="line"><span class="comment">//        mBtnWv.loadUrl(&quot;file:///android_asset/404.html&quot;);</span></span><br><span class="line">        <span class="comment">// 加载网络url</span></span><br><span class="line">        mBtnWv.getSettings().setJavaScriptEnabled(<span class="keyword">true</span>);</span><br><span class="line">        mBtnWv.setWebViewClient(<span class="keyword">new</span> MyWebViewClient());</span><br><span class="line">        mBtnWv.setWebChromeClient(<span class="keyword">new</span> MyWebChromeClient());</span><br><span class="line">        mBtnWv.clearCache(<span class="keyword">true</span>); <span class="comment">//清除缓存</span></span><br><span class="line">        mBtnWv.loadUrl(<span class="string">&quot;https://ooowuyaooo.gitee.io/&quot;</span>);</span><br><span class="line"></span><br><span class="line">        SwipeRefreshLayout swip_refresh_layout=findViewById(R.id.swipe_container); <span class="comment">//下拉刷新</span></span><br><span class="line"></span><br><span class="line">        swip_refresh_layout.setOnRefreshListener(<span class="keyword">new</span> SwipeRefreshLayout.OnRefreshListener() &#123; <span class="comment">//下拉刷新</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onRefresh</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">new</span> Handler().postDelayed(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">                        mBtnWv.clearCache(<span class="keyword">true</span>); <span class="comment">//清除缓存</span></span><br><span class="line">                        mBtnWv.loadUrl(<span class="string">&quot;https://ooowuyaooo.gitee.io/&quot;</span>);</span><br><span class="line">                        swip_refresh_layout.setRefreshing(<span class="keyword">false</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,<span class="number">2000</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//省略别的.....</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Above codes can realize the refresh function and clear the cache everytime when back-and-in and refresh to keep the datas updated. </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo 插入图片 失败的解决方案 / 配置环境变量</title>
+      <link href="2020/11/01/tips1/"/>
+      <url>2020/11/01/tips1/</url>
+      
+        <content type="html"><![CDATA[<p>使用hexo 插入图片，图片的标签会变为 设置的 url后缀+文件名，如/.com/xxx.jpg 等<br>原因是因为 hexo 升级后，对应的插件hexo-asset-image 并未升级，且留下bug，这里全部修改为绝对路径 即 全域名</p><p>修改 node_module/hexo-asset-image/index.js 中的大概60行附近的</p><p>//这个是源码 </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">this</span>).attr(<span class="string">&#x27;src&#x27;</span>, config.root + link + src);</span><br></pre></td></tr></table></figure><p>//修改为如下，data.permalink 是全路径 如我的</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">this</span>).attr(<span class="string">&#x27;src&#x27;</span>, data.permalink +src);</span><br></pre></td></tr></table></figure><p>经验证，如果使用上述办法，回导致在hexo generate的时候报hexo-asset-image load failed.<br>然后会导致手机浏览器或者电脑浏览器抽风，图片有时打得开有时打不开的问题，故参考了github上的解决方法。<br>24行 var endPos = link.length-1; </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">&#x27;cheerio&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPosition</span>(<span class="params">str, m, i</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hexo.extend.filter.register(<span class="string">&#x27;after_post_render&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> config = hexo.config;</span><br><span class="line">  <span class="function"><span class="title">if</span>(<span class="params">config.post_asset_folder</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> link = data.permalink;</span><br><span class="line">    <span class="keyword">var</span> beginPos = getPosition(link, <span class="string">&#x27;/&#x27;</span>, <span class="number">3</span>) + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">var</span> appendLink = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="comment">// In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.</span></span><br><span class="line">    <span class="comment">// if not with index.html endpos = link.lastIndexOf(&#x27;.&#x27;) + 1 support hexo-abbrlink</span></span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params"><span class="regexp">/.*\/index\.html$/</span>.test(link)</span>)</span> &#123;</span><br><span class="line">      <span class="comment">// when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span></span><br><span class="line">      <span class="comment">// image in xxtitle/ will go to xxtitle/index/</span></span><br><span class="line">      appendLink = <span class="string">&#x27;index/&#x27;</span>;</span><br><span class="line">      <span class="keyword">var</span> endPos = link.lastIndexOf(<span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">var</span> endPos = link.length-<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    link = link.substring(beginPos, endPos) + <span class="string">&#x27;/&#x27;</span> + appendLink;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> toprocess = [<span class="string">&#x27;excerpt&#x27;</span>, <span class="string">&#x27;more&#x27;</span>, <span class="string">&#x27;content&#x27;</span>];</span><br><span class="line">    <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">var</span> i = <span class="number">0</span>; i &lt; toprocess.length; i++</span>)</span>&#123;</span><br><span class="line">      <span class="keyword">var</span> key = toprocess[i];</span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: <span class="literal">false</span>,</span><br><span class="line">        xmlMode: <span class="literal">false</span>,</span><br><span class="line">        lowerCaseTags: <span class="literal">false</span>,</span><br><span class="line">        decodeEntities: <span class="literal">false</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(<span class="string">&#x27;img&#x27;</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> ($(<span class="built_in">this</span>).attr(<span class="string">&#x27;src&#x27;</span>))&#123;</span><br><span class="line">          <span class="comment">// For windows style path, we replace &#x27;\&#x27; to &#x27;/&#x27;.</span></span><br><span class="line">          <span class="keyword">var</span> src = $(<span class="built_in">this</span>).attr(<span class="string">&#x27;src&#x27;</span>).replace(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">          <span class="keyword">if</span>(!(<span class="regexp">/http[s]*.*|\/\/.*/</span>.test(src)</span><br><span class="line">            || <span class="regexp">/^\s+\//</span>.test(src)</span><br><span class="line">            || <span class="regexp">/^\s*\/uploads|images\//</span>.test(src))) &#123;</span><br><span class="line">            <span class="comment">// For &quot;about&quot; page, the first part of &quot;src&quot; can&#x27;t be removed.</span></span><br><span class="line">            <span class="comment">// In addition, to support multi-level local directory.</span></span><br><span class="line">            <span class="keyword">var</span> linkArray = link.split(<span class="string">&#x27;/&#x27;</span>).filter(<span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>&#123;</span><br><span class="line">              <span class="keyword">return</span> elem != <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">var</span> srcArray = src.split(<span class="string">&#x27;/&#x27;</span>).filter(<span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>&#123;</span><br><span class="line">              <span class="keyword">return</span> elem != <span class="string">&#x27;&#x27;</span> &amp;&amp; elem != <span class="string">&#x27;.&#x27;</span>;</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">if</span>(srcArray.length &gt; <span class="number">1</span>)</span><br><span class="line">            srcArray.shift();</span><br><span class="line">            src = srcArray.join(<span class="string">&#x27;/&#x27;</span>);</span><br><span class="line"></span><br><span class="line">            $(<span class="built_in">this</span>).attr(<span class="string">&#x27;src&#x27;</span>, config.root + link + src);</span><br><span class="line">            <span class="built_in">console</span>.info&amp;&amp;<span class="built_in">console</span>.info(<span class="string">&quot;update link as:--&gt;&quot;</span>+config.root + link + src);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.info&amp;&amp;<span class="built_in">console</span>.info(<span class="string">&quot;no src attr, skipped...&quot;</span>);</span><br><span class="line">          <span class="built_in">console</span>.info&amp;&amp;<span class="built_in">console</span>.info($(<span class="built_in">this</span>));</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>转载github fangchieh<br><a href="https://github.com/xcodebuild/hexo-asset-image/blob/3c114cf0c0343ab28469635085b225fcae7fb9d3/index.js#L24">https://github.com/xcodebuild/hexo-asset-image/blob/3c114cf0c0343ab28469635085b225fcae7fb9d3/index.js#L24</a></p><p>环境变量：C:\Users\Administrator\AppData\Roaming\npm\node_modules\hexo-cli\node_modules.bin</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hexo Tips </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Siemns Tsend/rcv connection</title>
+      <link href="2020/10/30/article-name/"/>
+      <url>2020/10/30/article-name/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/2020/10/30/article-name/1.png"><br><img src="/2020/10/30/article-name/2.png"></p><p>REQ / EN_R should be rise edge activated , both conf be true.<br>Len is the length of communication data 3 means 3 bytes =24 bits. </p><p>7004<br>通信连接已建立并且正在受到监视。未激活任何接收作业处理。</p><p>7006<br>当前正接收数据。</p><p>check if the status of Tsend is 7004 and Trcv is 7006.</p><p>#CONNECT not input the parameters open Properties  configure the Connection Data  ,  Connection ID (should be different from the remote station) , the ip address ,  port </p><p>local select initiative establish the connections . remote select opposite thing . </p><p>Tsend_properties<br><img src="/2020/10/30/article-name/3.png"><br><img src="/2020/10/30/article-name/4.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Siemens </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Connection</title>
+      <link href="2020/10/30/Connection/"/>
+      <url>2020/10/30/Connection/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
